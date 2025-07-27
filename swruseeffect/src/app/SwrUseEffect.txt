@@ -1,0 +1,52 @@
+✅ SWR Kya Hai?
+SWR ka matlab hai:
+🔁 Stale While Revalidate
+Ek React Hook library hai jo data fetching ko smart aur efficient banata hai.
+
+Made by: Vercel (Next.js ke creators)
+
+✅ SWR Ko Kyu Use Karte Hain?
+🔹 Benefits:
+Feature	Fayda
+🎯 Auto Caching	Same data dobara fetch nahi hota
+🔄 Background Refresh	Data background me update hota rehta hai
+⚡ Super Fast	Old (stale) data instantly dikhata hai, naya background me lata hai
+💥 Error Handling	Built-in support
+🧪 Revalidation	Focus ya reconnect hone par data fresh karta hai
+✅ Less Code	Axios ya fetch se kam code lagta hai
+
+✅ SWR Workflow Kaise Kaam Karta Hai?
+📌 Step by Step:
+Component Mount Hota Hai
+
+SWR hook run hota hai: useSWR(url, fetcher)
+
+Cache Check Karta Hai
+
+Agar cached data milta hai, turant dikhata hai (stale data)
+
+Saath hi background me new request bhejta hai (revalidate)
+
+New Data Aata Hai
+
+New data milte hi old data ko replace kar deta hai
+
+Revalidation Trigger Hota Hai
+
+Jab bhi:
+
+Window focus hota hai
+
+Network reconnect hoti hai
+
+Manually call karo mutate()
+
+✅ SWR + useEffect Ka Use Kab Karte Hain?
+useSWR se data fetch hota hai
+👉 useEffect use hota hai data aane ke baad kuch side effect perform karne ke liye, jaise:
+
+useEffect ka Use	Example
+✅ Console me log karna	console.log(data)
+✅ Local state update karna	setPosts(data.slice(0, 5))
+✅ Analytics event fire karna	trackPageView(data)
+✅ Alert / toast dikhana	toast.success('Data loaded!')
