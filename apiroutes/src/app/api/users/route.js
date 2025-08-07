@@ -9,3 +9,4 @@ export async function POST(request) {
   const body = await request.json();
   return NextResponse.json({ message: `User ${body.name} created` }, { status: 201 });
 }
+g
